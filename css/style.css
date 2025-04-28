@@ -28,14 +28,14 @@ body{
     height: 100px;
 }
     /* Pagina inicio desktop*/
-.titulo-inicio{
+#titulo-inicio{
     display: flex;
     justify-content: center;
     text-align: center;
     margin-top: 50px;
     margin-bottom:30px;
 }
-.titulo-inicio h1{
+#titulo-inicio h1{
     font-family: "Roboto Slab", serif;
     font-weight: bold;
     font-size: 50px !important;
@@ -492,7 +492,7 @@ footer{
         text-align: center;
     }
     #linea-divisoria-h{
-        width: 800px;
+        width: 40rem;
     }
     .col-sm-5{
         width: 350px !important;
@@ -570,6 +570,15 @@ footer{
         margin-bottom: 20px;
         width: 540px;
     }
+    .horarios-container{
+        width: 20rem;
+    }
+    .col-sm-3{
+        width: 20rem;
+    }
+    .col-sm-5{
+        width: 20rem;
+    }
     /* pagina productos lg */
     .container-buscador-y-productos{
         display: flex;
@@ -625,7 +634,7 @@ footer{
 @media screen and (max-width: 576px){ /* media sm */
     /* Pagina inicio sm*/
     #linea-divisoria-h{
-        width: 400px;
+        width: 20rem;
     }
     #linea-divisoria-h-mobile{
         width: 400px;
