@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* La unica solución que encontre para sacar el subrayado hipervinculo */
+/* La unica solución que encontré para sacar el subrayado hipervínculo */
 a {
   text-decoration: none !important;
   color: black !important;
@@ -10,9 +10,10 @@ header {
   background-color: rgb(124, 252, 124);
   width: 100% !important;
   height: 120px;
+  z-index: 1 !important;
 }
 
-/* Tambien la unica solucion que encontre para sacar el pixel que quedo entre la navbar y el body */
+/* Tambien la unica solución que encontré para sacar el pixel que quedó entre la navbar y el body */
 body {
   margin: 0px;
   padding: 0px;
@@ -25,6 +26,7 @@ body {
   background-color: rgb(124, 252, 124) !important;
   border: 1px solid black !important;
   width: 100% !important;
+  z-index: 1 !important;
 }
 
 .nav-link:hover {
@@ -46,7 +48,7 @@ body {
 }
 
 /* Pagina inicio desktop*/
-#titulo-inicio, #titulo-contacto, #titulo-faq, #titulo-ofertas {
+#titulo-inicio, #titulo-contacto, #titulo-faq, #titulo-ofertas, #titulo-productos {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -54,7 +56,7 @@ body {
   margin-bottom: 30px;
 }
 
-#titulo-inicio h1, #titulo-contacto h1, #titulo-faq h1, #titulo-ofertas h1 {
+#titulo-inicio h1, #titulo-contacto h1, #titulo-faq h1, #titulo-ofertas h1, #titulo-productos h1 {
   font-family: "Roboto Slab", serif;
   font-weight: bold;
   font-size: 50px !important;
@@ -68,6 +70,7 @@ body {
   background-color: black;
   width: 400px !important;
   height: 400px !important;
+  border-radius: 8px;
 }
 
 #linea-divisoria-h {
@@ -94,6 +97,7 @@ body {
   align-items: center;
   background-color: rgba(250, 243, 152, 0.767);
   border: 1px solid black;
+  border-radius: 8px;
   margin-top: 20px;
   margin-bottom: 20px;
   width: 500px;
@@ -133,6 +137,7 @@ body {
   display: flex;
   margin-right: 5rem;
   border: 1px solid lightslategray;
+  border-radius: 8px;
   background-color: rgba(250, 243, 152, 0.767);
   font-size: 20px;
   font-family: "Roboto Slab", serif;
@@ -141,6 +146,7 @@ body {
   text-align: center;
   font-size: 26px;
   margin-bottom: 200px;
+  margin-right: 2.5rem;
 }
 
 #linea-divisoria-v {
@@ -153,7 +159,8 @@ body {
 .col-sm-5 {
   width: 600px !important;
   height: 350px !important;
-  margin-left: 5rem;
+  margin-right: 0px;
+  margin-left: 2.5rem;
 }
 
 /* Pagina productos */
@@ -161,16 +168,6 @@ body {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-}
-
-#titulo-productos {
-  display: flex;
-  justify-content: center;
-  font-family: "Roboto Slab", serif;
-  font-weight: bold;
-  font-size: 50px !important;
-  margin-top: 50px;
-  margin-bottom: 30px;
 }
 
 .container-buscador-y-productos {
@@ -310,13 +307,6 @@ body {
 }
 
 /* Pagina FAQ */
-.titulo-faq h1 {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  font-size: 50px;
-  font-weight: bold;
-}
-
 .container-faq, .faq {
   display: flex;
   flex-direction: column;
@@ -333,6 +323,18 @@ body {
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: lightblue;
+}
+
+#faq:hover {
+  transform: scale(1.05) !important;
+}
+
+#faq:hover span {
+  text-decoration: underline;
+}
+
+#faq-2:hover {
+  transform: scale(1.05) !important;
 }
 
 .faq span {
@@ -353,12 +355,6 @@ body {
 }
 
 /* Pagina contacto */
-.titulo-contacto h1 {
-  font-family: "Roboto Slab", serif;
-  font-weight: bold;
-  font-size: 50px !important;
-}
-
 .container-contactos {
   display: flex;
   justify-content: center;

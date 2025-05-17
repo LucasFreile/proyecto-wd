@@ -2,9 +2,19 @@
 $color-containers: rgba(250, 243, 152, 0.767);
 $color-buttons:rgb(255, 88, 88);
 $color-buttons-hover:rgb(243, 52, 52);
-
-
-/* La unica solución que encontre para sacar el subrayado hipervinculo */
+@mixin container-titulos($display,$justify-content,$text-align,$margin-top,$margin-bottom){
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+@mixin titulos($font-family,$font-weight,$font-size){
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    font-size: 50px !important;
+}
+/* La unica solución que encontré para sacar el subrayado hipervínculo */
 a{
     text-decoration: none !important;
     color: black !important;
@@ -14,8 +24,9 @@ header{
     background-color: rgb(124, 252, 124);
     width: 100% !important;
     height: 120px;
+    z-index: 1 !important;
 }
-/* Tambien la unica solucion que encontre para sacar el pixel que quedo entre la navbar y el body */
+/* Tambien la unica solución que encontré para sacar el pixel que quedó entre la navbar y el body */
 body{
     margin: 0px;
     padding: 0px;
@@ -27,6 +38,7 @@ body{
     background-color: rgb(124, 252, 124) !important;
     border: 1px solid black !important;
     width: 100% !important;
+    z-index: 1  !important;
 }
 .nav-link:hover{
     color: #00c3ff !important;
@@ -44,16 +56,10 @@ body{
 }
     /* Pagina inicio desktop*/
 #titulo-inicio{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom:30px;
+    @include container-titulos(-display, -justify-content, -text-align, -margin-top, -margin-bottom,)   
 }
 #titulo-inicio h1{
-    font-family: "Roboto Slab", serif;
-    font-weight: bold;
-    font-size: 50px !important;
+    @include titulos(-font-family, -font-weight, -font-size)
 }
 #container-logo{
     width: 415px !important;
@@ -62,6 +68,7 @@ body{
     background-color: black;
     width: 400px !important;
     height: 400px !important;
+    border-radius: 8px;
 }
 #linea-divisoria-h{
     border-top: 1px solid black !important;
@@ -84,6 +91,7 @@ body{
     align-items: center;
     background-color: $color-containers;
     border: 1px solid black;
+    border-radius: 8px;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 500px;
@@ -117,6 +125,7 @@ body{
     display: flex;
     margin-right: 5rem;
     border: 1px solid lightslategray;
+    border-radius: 8px;
     background-color: $color-containers;
     font-size: 20px;
     font-family: "Roboto Slab", serif;
@@ -125,6 +134,7 @@ body{
     text-align: center;
     font-size: 26px;
     margin-bottom: 200px;
+    margin-right: 2.5rem;
 }
 #linea-divisoria-v{
     width: 1px !important;
@@ -136,7 +146,8 @@ body{
     @extend .col-sm-3;
     width: 600px !important;
     height: 350px !important;
-    margin-left: 5rem;
+    margin-right: 0px;
+    margin-left: 2.5rem;
 }
 /* Pagina productos */
 *{
@@ -145,13 +156,7 @@ body{
     padding: 0px;
 }
 #titulo-productos{
-    display: flex;
-    justify-content: center;
-    font-family: "Roboto Slab", serif;
-    font-weight: bold;
-    font-size: 50px !important;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    @extend #titulo-inicio
 }
 .container-buscador-y-productos{
     display: flex;
@@ -282,12 +287,6 @@ body{
 #titulo-faq{
     @extend #titulo-inicio
 }
-.titulo-faq h1{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 50px;
-    font-weight: bold;
-}
 .container-faq{
     display: flex;
     flex-direction: column;
@@ -305,6 +304,15 @@ body{
     margin-bottom:20px;
     background-color: lightblue;
     }
+#faq:hover{
+    transform: scale(1.05) !important;
+}
+#faq:hover span{
+    text-decoration: underline;
+}
+#faq-2:hover{
+    transform: scale(1.05) !important;
+}
 .faq span{
     font-family: "Roboto Slab", serif;
     font-weight: 700;
@@ -322,11 +330,6 @@ body{
 /* Pagina contacto */
 #titulo-contacto{
     @extend #titulo-inicio
-}
-.titulo-contacto h1{
-    font-family: "Roboto Slab", serif;
-    font-weight: bold;
-    font-size: 50px !important;
 }
 .container-contactos{
     display: flex;
