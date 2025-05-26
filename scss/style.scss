@@ -224,6 +224,7 @@ body{
 }
 .producto p{
     margin: 0px;
+    font-weight: bold;
 }
 .producto img{
     width: 80px;
@@ -278,6 +279,16 @@ body{
     align-items: center;
 }
 .oferta p{
+    margin: 0px;
+}
+.oferta-precio-anterior{
+    text-decoration: line-through;
+    color: red;
+    font-size: 15px;
+    margin: 0px;
+}
+.oferta-precio-nuevo{
+    font-size: 20px;
     margin: 0px;
 }
 .oferta img{
